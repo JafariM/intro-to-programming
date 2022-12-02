@@ -13,6 +13,7 @@ let skills = ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'Mysql'];
 const skillSection = document.querySelector('#skills');
 //select the ul
 const skillList = skillSection.children[1];
+//const skillList = getElementsByTagName('ul');
 
 for (let i = 0; i < skills.length; i++) {
   let skill = document.createElement('li');
