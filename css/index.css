@@ -1,0 +1,67 @@
+body {
+  background-color: floralwhite;
+  color: midnightblue;
+  font-family: 'Nunito', sans-serif;
+}
+
+section {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+h1 {
+  font-size: large;
+  font-weight: 900;
+  color: darkblue;
+}
+
+ul li {
+  margin-bottom: 7px;
+  text-align: justify;
+}
+
+form#leave_message label {
+  font-size: large;
+  color: #2b1299;
+}
+
+form#leave_message input,
+textarea {
+  padding: 5px;
+  margin: 5px 5px;
+  border: 1px solid cornflowerblue;
+  font-size: 15px;
+}
+
+button#submit {
+  margin-top: 20px;
+  padding: 5px 10px;
+  background-color: #b2dbae;
+  border: 1px solid cornflowerblue;
+  font-size: large;
+  font-weight: 500;
+
+}
+
+ul#user_message a {
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+
+}
+
+/* remove button */
+ul#user_message button {
+
+  border: none;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: large;
+  color: #e0455e;
+}
+
+footer {
+  background-color: #e2e2a6;
+  padding: 10px 5px 10px 20px;
+}
