@@ -24,7 +24,10 @@ for (let i = 0; i < skills.length; i++) {
 //form submission
 const messageForm = document.querySelector('#leave_message');
 const messageSection = document.getElementById('messages');
-messageSection.style.display = 'none';
+<<<<<<< HEAD
+//messageSection.style.display = 'none';
+=======
+>>>>>>> 9f2f0553e2fae6eed7dbdd968b167bf2a13693dc
 
 messageForm.addEventListener('submit', event => {
   //prevent from page refresh and resetting the inputs after submitting the form
@@ -41,7 +44,11 @@ messageForm.addEventListener('submit', event => {
   const newMessage = document.createElement('li');
   const revmoveButton = document.createElement('button');
 
-  revmoveButton.textContent = 'Remove';
+<<<<<<< HEAD
+  revmoveButton.textContent = 'x';
+=======
+
+>>>>>>> 9f2f0553e2fae6eed7dbdd968b167bf2a13693dc
   revmoveButton.setAttribute('type', 'button');
   revmoveButton.addEventListener('click', () => {
     const entry = revmoveButton.parentNode;
@@ -53,7 +60,11 @@ messageForm.addEventListener('submit', event => {
     }
   })
   //put the name,email and message into li
-  newMessage.innerHTML = `<a href = 'mailto:${email}' >${name} </a><span>Wrote: ${message} </span>`;
+<<<<<<< HEAD
+  newMessage.innerHTML = `<a href = 'mailto:${email}' >${name} </a><span> Message:  ${message} </span>`;
+=======
+
+>>>>>>> 9f2f0553e2fae6eed7dbdd968b167bf2a13693dc
   //add li and button to ul 
   newMessage.appendChild(revmoveButton);
   messageList.appendChild(newMessage);
@@ -61,6 +72,10 @@ messageForm.addEventListener('submit', event => {
   messageSection.style.display = 'block';
 
 
+<<<<<<< HEAD
+
+=======
 });
 
 
+>>>>>>> 9f2f0553e2fae6eed7dbdd968b167bf2a13693dc
