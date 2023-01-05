@@ -2,6 +2,7 @@ body {
   background-color: floralwhite;
   color: midnightblue;
   font-family: 'Nunito', sans-serif;
+  padding: 0 10px;
 }
 
 section {
@@ -9,6 +10,23 @@ section {
   padding: 5px;
 }
 
+/* navigation bar */
+nav.navbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+nav.navbar>.navItem {
+  width: 100px;
+  flex: 0 1 auto;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* end of navigation */
 h1 {
   font-size: large;
   font-weight: 900;
@@ -20,20 +38,41 @@ ul li {
   text-align: justify;
 }
 
+div.experienceList {
+  display: flex;
+  flex-direction: column;
+}
+
+div.experienceList>.experienceItem {
+  flex: 1;
+}
+
+/* from style */
+form#leave_message {
+  display: flex;
+  flex-direction: column;
+}
+
+form#leave_message>.formItem {
+  width: 300px;
+  flex: auto;
+
+}
+
 form#leave_message label {
   font-size: large;
   color: #2b1299;
 }
 
-form#leave_message input,
+form#leave_message>input,
 textarea {
-  padding: 5px;
-  margin: 5px 5px;
   border: 1px solid cornflowerblue;
   font-size: 15px;
+  padding: 7px;
 }
 
-button#submit {
+form#leave_message>button#submit {
+  width: 150px;
   margin-top: 20px;
   padding: 5px 10px;
   background-color: #b2dbae;
@@ -43,6 +82,7 @@ button#submit {
 
 }
 
+/* end of form */
 ul#user_message a {
   font-weight: 700;
   text-decoration: none;
@@ -64,4 +104,25 @@ ul#user_message button {
 footer {
   background-color: #e2e2a6;
   padding: 10px 5px 10px 20px;
+}
+
+/* desktop*/
+@media (max-width: 1024px) {}
+
+/* phone */
+@media (max-width :640px) {
+  form#leave_message {
+    align-items: center;
+  }
+
+  nav.navbar {
+    flex-direction: column;
+  }
+}
+
+/* tablet */
+@media (max-width:768px) {
+  nav.navbar {
+    flex-direction: column;
+  }
 }

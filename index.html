@@ -7,28 +7,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
   </head>
   <body>
-    <section>
+    <header>
+      <nav class="navbar">
+        <a href="#about" class="navItem">About</a>
+        <a href="#experience" class="navItem">Experience</a>
+        <a href="#skills" class="navItem">Skills</a>
+        <a href="#connect" class="navItem">Connect</a>
+      </nav>
+    </header>
+    <section id="about">
       <h1>About</h1>
       <p>I always like learning new things and enjoy solving problems, that is why I want to work as a 
         web developer. I worked as a web developer 6 years ago, but I have taken a career break to raise
         my kids. Now I am trying to refresh my knowldege and start my career again.</p>
     </section>
-    <section>
+    <section id="experience">
       <h1>Experience</h1>
       <p>I have more than 4 years expericne working in diffrent jobs.</p>
-      <ul>
-        <li>My first job was teaching the 3 grade students in a private school.</li>
-        <li>I worked 9 months translating technical documents from English to Farsi for Afghan army.</li>
-        <li>I started my first job as a web developer in 2014 after graduting from university.</li>
-        <li>As an intern in a bigger company I worked 3 months to learn how to work with Laravel framework and 
-          made a project for course registration.</li>
-          <li>My last job in Afghanistan was a web developer and last for one and half year, I worked in 2 projects
-            EDMS(Electronic Document Managment System) and HMIS(Hospital Managment Information System).</li>
-          <li>Currently I am working as a part time home daycare provider for 3 years.</li>
-      </ul>
+      <div class="experienceList">
+        <p class="experienceItem">My first job was teaching the 3 grade students in a private school.</p>
+        <p class="experienceItem">I worked 9 months translating technical documents from English to Farsi for Afghan army.</p>
+        <p class="experienceItem">I started my first job as a web developer in 2014 after graduting from university.</p>
+        <p class="experienceItem">As an intern in a bigger company I worked 3 months to learn how to work with Laravel framework and 
+          made a project for course registration.</p>
+          <p class="experienceItem">My last job in Afghanistan was a web developer and last for one and half year, I worked in 2 projects
+            EDMS(Electronic Document Managment System) and HMIS(Hospital Managment Information System).</p>
+          <p class="experienceItem">Currently I am working as a part time home daycare provider for 3 years.</p>
+      </div>
     </section>
     <section id="skills">
-      <h2>Skills</h2>
+      <h1>Skills</h1>
       <ul></ul>
     </section>
     <section>
@@ -38,29 +46,21 @@
         <li>Email : masuma.jafari@gmail.com</li>
       </ul>
     </section>
-    <section>
+    <section id="connect">
       <h2>Leave a Message</h2>
       <form name="leave_message" id="leave_message">
-        <label for="name">Name: </label>
-        <input type="text" name="name" id="name" required><br>
-        <label for="email">Email: </label>
-        <input type="email" name="email" id="email" required><br>
-        <label for="message">Message:</label>
-        <textarea name="message" required></textarea><br>
-<<<<<<< HEAD
-        <button type="submit" id="submit">Submit</button>
-=======
-    
->>>>>>> 9f2f0553e2fae6eed7dbdd968b167bf2a13693dc
+        <label for="name" class="formItem">Name: </label>
+        <input type="text" name="name" id="name" class="formItem" required>
+        <label for="email" class="formItem">Email: </label>
+        <input type="email" name="email" id="email" class="formItem" required>
+        <label for="message" class="formItem">Message:</label>
+        <textarea name="message" class="formItem" required></textarea>
+        <button type="submit" id="submit" class="formItem">Submit</button>
       </form>
     </section>
     <section id="messages">
       <h2>Messages</h2>
-<<<<<<< HEAD
       <ul id="user_message"></ul>
-=======
-  
->>>>>>> 9f2f0553e2fae6eed7dbdd968b167bf2a13693dc
     </section>
     <footer>
     </footer>
