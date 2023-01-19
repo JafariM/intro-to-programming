@@ -39,6 +39,10 @@
       <h1>Skills</h1>
       <ul></ul>
     </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul></ul>
+    </section>
     <section>
       <h1>Connect</h1>
       <ul>
@@ -65,5 +69,23 @@
     <footer>
     </footer>
     <script src="js/index.js"></script>
+    <script>
+      let githubRequest = new XMLHttpRequest();
+      const projectSection =document.getElementById('projects');
+      const projectList = projectSection.querySelector('ul');
+
+      githubRequest.open('GET','https://api.github.com/users/JafariM/repos');
+      githubRequest.send();
+      githubRequest.addEventListener('load',function(){
+        let repositories = JSON.parse(this.response);
+        console.log(repositories);
+        for(rep of repositories){
+
+          let project = document.createElement('li');
+          project.innerText =  rep.name;
+          projectList.appendChild(project);
+        }
+      })
+    </script>
   </body>
 </html>
