@@ -68,5 +68,22 @@ messageForm.addEventListener('submit', event => {
 
 });
 
+//Ajax request do display Github projects
+let githubRequest = new XMLHttpRequest();
+const projectSection = document.getElementById('projects');
+const projectList = projectSection.querySelector('ul');
+
+githubRequest.open('GET', 'https://api.github.com/users/JafariM/repos');
+githubRequest.send();
+githubRequest.addEventListener('load', function () {
+  let repositories = JSON.parse(this.response);
+  for (rep of repositories) {
+
+    let project = document.createElement('li');
+    project.innerText = rep.name;
+    projectList.appendChild(project);
+  }
+})
+
 
 
