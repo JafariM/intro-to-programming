@@ -68,5 +68,34 @@ messageForm.addEventListener('submit', event => {
 
 });
 
+//retrive github repos with ajax
+// let githubRequest = new XMLHttpRequest();
+const projectSection = document.getElementById('projects');
+const projectList = projectSection.querySelector('ul');
+
+// githubRequest.open('GET', 'https://api.github.com/users/JafariM/repos');
+// githubRequest.send();
+// githubRequest.addEventListener('load', function () {
+//   let repositories = JSON.parse(this.response);
+//   console.log(repositories);
+//   for (rep of repositories) {
+
+//     let project = document.createElement('li');
+//     project.innerText = rep.name;
+//     projectList.appendChild(project);
+//   }
+// })
+
+let githubRequest = fetch('https://api.github.com/users/JafariM/repos')
+  .then((response) => response.json())
+  .then((response) => {
+    for (rep of response) {
+      let project = document.createElement('li');
+      project.innerText = rep.name;
+      projectList.appendChild(project);
+    }
+  })
+
+
 
 
