@@ -1,67 +1,190 @@
 body {
-  background-color: floralwhite;
-  color: midnightblue;
+  background-color: #e4dad4;
+  color: #323232;
   font-family: 'Nunito', sans-serif;
+  font-family: 'Signika Negative', sans-serif;
   padding: 0 10px;
 }
 
+h2,
+nav strong em {
+  color: #E85A4F;
+}
+
+a {
+  color: #323232;
+  text-decoration: none;
+}
+
 section {
-  margin-bottom: 10px;
+  margin: 30px 15px;
   padding: 5px;
 }
 
 /* navigation bar */
 nav.navbar {
   display: flex;
-  justify-content: flex-end;
   margin-bottom: 30px;
 }
 
-nav.navbar>.navItem {
-  width: 100px;
-  flex: 0 1 auto;
-  text-decoration: none;
+nav #logoName {
+  flex: 3;
+  font-size: 1.5em;
+}
+
+nav .navItem {
   padding: 10px;
+  margin: 5px;
   font-weight: 800;
   text-transform: uppercase;
 }
 
+nav a:hover {
+  background-color: #E98074;
+  border-radius: 5px;
+}
+
 /* end of navigation */
-h1 {
-  font-size: large;
+
+/* about me section */
+p#welcome {
+  font-size: 2em;
   font-weight: 900;
-  color: darkblue;
+  line-height: 0.1em;
 }
 
-ul li {
-  margin-bottom: 7px;
-  text-align: justify;
-}
-
-div.experienceList {
+div.aboutMe {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  line-height: 1.5em;
 }
 
-div.experienceList>.experienceItem {
-  flex: 1;
+div.aboutMe .aboutCol {
+  padding: 1.5em;
 }
+
+div.aboutMe img {
+  max-width: 100%;
+}
+
+/* end of about me */
+
+/* experiance section */
+table {
+  width: 100%;
+}
+
+table tbody tr td {
+  width: 30%;
+  padding: 15px;
+  text-align: right;
+}
+
+table tbody tr td:first-child {
+  max-width: 70%;
+  text-align: left;
+}
+
+table tbody tr {
+  box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.4);
+}
+
+/* end of experiance section */
+
+/* skills section */
+#skills {
+  text-align: center;
+}
+
+.skillRow1,
+.skillRow2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 60%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.skillItem {
+  margin: 20px;
+  flex: 0 1 auto;
+}
+
+/* end of skills section  */
+
+/* projects section */
+.projects ol {
+  counter-reset: li;
+  list-style: none;
+  *list-style: decimal;
+  font: 15px 'trebuchet MS', 'lucida sans';
+  padding: 0;
+  margin-bottom: 4em;
+
+}
+
+.projects ol ol {
+  margin: 0 0 0 2em;
+}
+
+.projects a {
+  position: relative;
+  display: block;
+  padding: .4em .4em .4em 2em;
+  *padding: .4em;
+  margin: .5em 0;
+  background: #f1f0ef;
+  color: #444;
+  text-decoration: none;
+  -moz-border-radius: .3em;
+  -webkit-border-radius: .3em;
+  border-radius: .3em;
+}
+
+.projects a:hover {
+  background: #E98074;
+  text-decoration: underline;
+}
+
+.projects a:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -1.3em;
+  top: 50%;
+  margin-top: -1.3em;
+  background: #d8c3a4;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  border: .3em solid #fff;
+  text-align: center;
+  font-weight: bold;
+  -moz-border-radius: 2em;
+  -webkit-border-radius: 2em;
+  border-radius: 2em;
+  color: #FFF;
+}
+
+/* end of projects */
 
 /* from style */
 form#leave_message {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 form#leave_message>.formItem {
   width: 300px;
   flex: auto;
-
 }
 
 form#leave_message label {
   font-size: large;
-  color: #2b1299;
+  padding: 3px;
 }
 
 form#leave_message>input,
@@ -69,23 +192,25 @@ textarea {
   border: 1px solid cornflowerblue;
   font-size: 15px;
   padding: 7px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 5px;
+
 }
 
 form#leave_message>button#submit {
   width: 150px;
   margin-top: 20px;
   padding: 5px 10px;
-  background-color: #b2dbae;
-  border: 1px solid cornflowerblue;
+  background-color: #323232;
+  color: beige;
   font-size: large;
   font-weight: 500;
-
+  border-radius: 20px;
 }
 
 /* end of form */
 ul#user_message a {
   font-weight: 700;
-  text-decoration: none;
   display: block;
   margin-bottom: 8px;
 
@@ -102,8 +227,18 @@ ul#user_message button {
 }
 
 footer {
-  background-color: #e2e2a6;
+  background-color: #c7b1a4;
   padding: 10px 5px 10px 20px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+footer #copyRight {
+  flex: 3;
+}
+
+footer .footerItem {
+  margin: 5px;
 }
 
 /* desktop*/
