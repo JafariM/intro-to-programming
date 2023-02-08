@@ -97,7 +97,6 @@ let githubRequest = fetch('https://api.github.com/users/JafariM/repos')
   .then((response) => response.json())
 
   .then((response) => {
-    console.log(response)
     for (rep of response) {
       let project = document.createElement('li');
       let projectLink = document.createElement('a');
